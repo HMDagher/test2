@@ -1,9 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import '/index.dart';
-import 'home_page_widget.dart' show HomePageWidget;
+import 'preview_page_widget.dart' show PreviewPageWidget;
 import 'package:flutter/material.dart';
 
-class HomePageModel extends FlutterFlowModel<HomePageWidget> {
+class PreviewPageModel extends FlutterFlowModel<PreviewPageWidget> {
   @override
   void initState(BuildContext context) {}
 

@@ -44,8 +44,37 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: HomePageWidget.routeName,
           path: HomePageWidget.routePath,
           builder: (context, params) => HomePageWidget(),
+        ),
+        FFRoute(
+          name: CamAwsWidget.routeName,
+          path: CamAwsWidget.routePath,
+          builder: (context, params) => CamAwsWidget(
+            example: params.getParam(
+              'example',
+              ParamType.String,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: PreviewPageWidget.routeName,
+          path: PreviewPageWidget.routePath,
+          builder: (context, params) => PreviewPageWidget(
+            type: params.getParam(
+              'type',
+              ParamType.String,
+            ),
+            imagePath: params.getParam(
+              'imagePath',
+              ParamType.String,
+            ),
+            videoPath: params.getParam(
+              'videoPath',
+              ParamType.String,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
+      observers: [routeObserver],
     );
 
 extension NavParamExtensions on Map<String, String?> {
