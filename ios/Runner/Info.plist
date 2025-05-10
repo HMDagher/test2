@@ -43,7 +43,14 @@
 	<true/>
 
 
-
+	<key>NSCameraUsageDescription</key>
+    <string>Please accept</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+    <string>Please accept</string>
+	<key>NSMicrophoneUsageDescription</key>
+    <string>Please accept</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+    <string>Please accept</string>
 
 
 
